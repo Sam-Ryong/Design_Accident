@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<!-- saved from url=(0303)file:///C:/Users/chaen/Desktop/%EA%B9%80%EC%B1%85%EC%9D%80/School/1-2/%EB%94%94%EC%9E%90%EC%9D%B8%EC%A0%81%20%EC%82%AC%EA%B3%A0/%EB%94%94%EC%82%AC%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/%EC%B2%AB%ED%99%94%EB%A9%B4%20%ED%85%8C%EC%8A%A4%ED%8A%B8/%EC%B2%AB%ED%99%94%EB%A9%B4%ED%85%8C%EC%8A%A4%ED%8A%B8.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>로그인</title>
+    <link rel="stylesheet" href="./첫화면테스트2_files/styles1.css">
+  </head>
+  <body>
+    <form method="post" action="/login">
+<!-- method = 입력받은 데이터를 서버에 전달할 방식 
+  = 백엔드로 보내는 값(서버로 전송되는 값)에서 파일과 같은 경우는 워낙 기니까 못보내므로 그때 method를 "post"로 바꿔준다. -->
+  <div class="login-wrap">
+    <div class="login-html">
+      <input id="tab-1" type="radio" name="tab" class="sign-in" checked=""><label for="tab-1" class="tab">Sign In</label>
+      <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">Sign Up</label>
+      <div class="login-form">
+        <div class="sign-in-htm">
+          <div class="group">
+            <label for="id" class="label">Email</label>
+            <input id="id" type="text" class="input">
+          </div>
+          <div class="group">
+            <label for="pass" class="label">Password</label>
+            <input id="pass" type="password" class="input" data-type="password">
+          </div>
+          <div class="group">
+            <input type="submit" class="button" value="Sign In">
+          </div>
+          </div>
+
+      </form>
+
+       <form method="post" action="/signup">
+        <div class="sign-up-htm">
+          <div class="group">
+            <label for="id" class="label">Email</label>
+            <input id="id" type="text" class="input">
+          </div>
+          <div class="group">
+            <label for="pass" class="label">Password</label>
+            <input id="pass" type="password" class="input" data-type="password">
+          </div>
+          <div class="group">
+            <label for="name" class="label">userName</label>
+            <input id="name" type="text" class="input">
+          </div>
+          <div class="group">
+            <label for="phone" class="label">Phone</label>
+            <input id="phone" type="text" class="input">
+          </div>
+          <div class="group">
+          <label for="interest" class="label">관심분야</label>
+          </div>
+          <div class="group">
+            <input id="classic" type="checkbox" class="check">
+            <label for="classic"><span class="icon"></span> 클래식 </label>
+            <input id="jazz" type="checkbox" class="check">
+            <label for="jazz"><span class="icon"></span> 재즈 </label>
+            <input id="ccm" type="checkbox" class="check">
+            <label for="ccm"><span class="icon"></span> CCM </label>
+            <input id="pop" type="checkbox" class="check">
+            <label for="pop"><span class="icon"></span> 팝 </label>
+            <input id="ballad" type="checkbox" class="check">
+            <label for="ballad"><span class="icon"></span> 발라드 </label>
+            <input id="rnb" type="checkbox" class="check">
+            <label for="rnb"><span class="icon"></span> R&B </label>
+            <input id="hiphop" type="checkbox" class="check">
+            <label for="hiphop"><span class="icon"></span> 힙합 </label>
+            <input id="country" type="checkbox" class="check">
+            <label for="country"><span class="icon"></span> 메탈 </label>
+            <input id="disco" type="checkbox" class="check">
+            <label for="disco"><span class="icon"></span> 디스코 </label>
+            <input id="rock" type="checkbox" class="check">
+            <label for="rock"><span class="icon"></span> 록 음악 </label>
+            <input id="elec" type="checkbox" class="check">
+            <label for="elec"><span class="icon"></span> 전자 음악 </label>
+            <input id="trot" type="checkbox" class="check">
+            <label for="trot"><span class="icon"></span> 트로트 </label>
+            <input id="edm" type="checkbox" class="check">
+            <label for="edm"><span class="icon"></span> EDM </label>
+            <input id="korea" type="checkbox" class="check">
+            <label for="korea"><span class="icon"></span> 민속음악 </label>
+            </div>
+            <div class="group">
+            <!-- 여기서부터 미술 -->
+            <input id="west" type="checkbox" class="check">
+            <label for="west"><span class="icon"></span> 서양화 </label>
+            <input id="orient" type="checkbox" class="check">
+            <label for="orient"><span class="icon"></span> 동양화 </label>
+            <input id="sculp" type="checkbox" class="check">
+            <label for="sculp"><span class="icon"></span> 조소 </label>
+            <input id="arch" type="checkbox" class="check">
+            <label for="arch"><span class="icon"></span> 건축 </label>
+            <input id="craft" type="checkbox" class="check">
+            <label for="craft"><span class="icon"></span> 공예 </label>
+            <input id="calli" type="checkbox" class="check">
+            <label for="calli"><span class="icon"></span> 서예 </label>
+            <input id="fashion" type="checkbox" class="check">
+            <label for="fashion"><span class="icon"></span> 패션 </label>
+            <input id="inter" type="checkbox" class="check">
+            <label for="inter"><span class="icon"></span> 인테리어 </label>
+            <input id="graphic" type="checkbox" class="check">
+            <label for="graphic"><span class="icon"></span> 그래픽 </label>
+            <input id="ani" type="checkbox" class="check">
+            <label for="ani"><span class="icon"></span> 만화 </label>
+          </div>
+          <div class="group">
+            <input type="submit" class="button" value="Sign up !">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</form></body></html>

@@ -6,6 +6,8 @@ import session from 'express-session';
 import globalRouter from './routers/globalRouter';
 import userRouter from './routers/userRouter';
 import featureRouter from './routers/featureRouter';
+import mainRouter from './routers/mainRouter';
+import dynamicRouter from './routers/dynamicRouter';
 
 const app = express();
 const logger = morgan('dev');
@@ -31,5 +33,7 @@ app.use(
 app.use('/', globalRouter);
 app.use('/', userRouter);
 app.use('/', featureRouter);
+app.use('/', mainRouter);
+app.use('/', dynamicRouter);
 
 export default app;

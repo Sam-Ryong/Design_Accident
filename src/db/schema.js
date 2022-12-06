@@ -1,13 +1,14 @@
 import mongoose from 'mongoose';
 import bcrypt from 'bcrypt';
-import jwt from 'jsonwebtoken'; //여기 슈발
+import jwt from 'jsonwebtoken';
 
 const saltRounds = 10;
-
+//{ url: 0, Pname: 1, category: 2, role: 3, date: 4, lastupdate: 5 }
 const userSchema = mongoose.Schema({
   name: {
     type: String,
     maxlength: 50,
+    unique: 1,
   },
   id: {
     type: String,
@@ -18,6 +19,11 @@ const userSchema = mongoose.Schema({
     type: String,
     minLength: 5,
   },
+  project: { type: Array },
+  token: {
+    type: String,
+  },
+  intro: { type: String },
 });
 
 //save 메소드가 실행되기전에 비밀번호를 암호화하는 로직을 짜야한다
@@ -49,7 +55,7 @@ userSchema.methods.comparePassword = function (plainPassword) {
 };
 
 userSchema.methods.generateToken = function () {
-  // let user = this;
+  //let user = this;
   const token = jwt.sign(this._id.toHexString(), 'secretToken');
   this.token = token;
   return this.save()
@@ -70,6 +76,6 @@ userSchema.statics.findByToken = function (token) {
 };
 //여기까지 슈발
 
-const User = mongoose.model('Artist1', userSchema); //최종할때 모델명 변경할것
+const User = mongoose.model('Artist', userSchema); //최종할때 모델명 변경할것
 
 module.exports = { User };
